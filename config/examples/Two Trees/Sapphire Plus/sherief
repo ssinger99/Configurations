@@ -1,0 +1,32 @@
+the latest Two Trees Sapphire based on STM321f /MKS Robin Nano35 has caused a memory overflow
+
+-this might be related to lvgl driver
+
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/ststm32/genericSTM32F103VE.html
+PLATFORM: ST STM32 (12.0.0) > STM32F103VE (64k RAM. 512k Flash)
+HARDWARE: STM32F103VET6 72MHz, 64KB RAM, 512KB Flash
+DEBUG: Current (jlink) External (blackmagic, cmsis-dap, jlink, stlink)
+PACKAGES:
+ - framework-arduinoststm32-maple 3.10000.201129 (1.0.0)
+ - tool-stm32duino 1.0.2
+ - toolchain-gccarmnoneeabi 1.70201.0 (7.2.1)
+Converting Marlin.ino
+LDF: Library Dependency Finder -> http://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 28 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- <SoftwareSerialM> 1.0.0
+|-- <lvgl> 6.1.1
+|-- <STM32ADC> 1.0
+|-- <EEPROM>
+|-- <USBComposite for STM32F1> 0.99
+|-- <Wire> 1.0
+|-- <Servo(STM32F1)> 1.1.2
+Building in release mode
+Linking .pio\build\mks_robin_nano35\firmware.elf
+c:/users/sheri/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: .pio/build/mks_robin_nano35/firmware.elf section `.bss' will not fit in region `ram'
+c:/users/sheri/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: region `ram' overflowed by 3976 bytes
+collect2.exe: error: ld returned 1 exit status
+*** [.pio\build\mks_robin_nano35\firmware.elf] Error 1
